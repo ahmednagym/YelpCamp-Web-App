@@ -15,14 +15,17 @@ var campgroundRoutes = require("./routes/campgrounds"),
     commentsRoutes   = require("./routes/comments"),    
     indexRoutes      = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/yelp_camp");
+//mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb://nagy:12345@ds231090.mlab.com:31090/yelpcamp-database");
 app.use(bodyparser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
 app.set("view engine", "ejs");
 //seedDB();
+
 app.locals.moment = require('moment');
+
 //passport configuration
 app.use(require("express-session")({
     secret: "fight club",
