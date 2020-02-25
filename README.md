@@ -11,4 +11,4 @@
 - Responsive Design using Bootstrap
 - Deployed on Heroku
 - Database hosted on MongoDB Atlas
-- Authentication using PassportJS
+- Authentication using Passport.JS
